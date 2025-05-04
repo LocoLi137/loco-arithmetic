@@ -3,4 +3,4 @@
 /java/target
 /java/.idea
 
-./java/target/*
+/java/target/*
