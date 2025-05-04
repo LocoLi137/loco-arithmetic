@@ -16,18 +16,18 @@ public class LC94_BinaryTree {
     }
 
     public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> res = new ArrayList<Integer>();
+        List<Integer> res = new ArrayList<>();
         inorder(root, res);
         return res;
     }
 
-    public void inorder(TreeNode root, List<Integer> res) {
-        if (root == null) {
-            return;
-        }
-        inorder(root.left, res);
-        res.add(root.val);
-        inorder(root.right, res);
+    private void inorder(TreeNode treeNode, List<Integer> list) {
+        if (treeNode == null ) return ;
+
+        inorder(treeNode.left, list);
+        list.add(treeNode.val);
+        inorder(treeNode.right, list);
+        
     }
 
 }
